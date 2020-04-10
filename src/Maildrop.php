@@ -35,7 +35,7 @@ class Maildrop
                     'timeout' => 25,
                     'http_errors' => false,
                     'headers' => [
-                        'User-Agent' => 'maildrop-php/X.X',
+                        'User-Agent' => 'maildrop-php/1.0',
                     ]
                 ]);
         }
