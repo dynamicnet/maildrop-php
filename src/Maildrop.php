@@ -22,22 +22,32 @@ class Maildrop
     private $httpClient=null;
     private $endpoint = 'https://api.dpmail.fr/json/';
 
-    public function __construct()
+    private $http_default_options = [
+        'connect_timeout' => 5,
+        'timeout' => 25
+    ];
+
+    private $http_options = [];
+
+    public function __construct($param_http_options=null)
     {
+        if (\is_array($param_http_options)) {
+            $validated_user_http_options = \array_intersect_key($param_http_options, $this->http_default_options);
+            $this->http_options = \array_merge($this->http_default_options, $validated_user_http_options);
+        }
+
     }
 
     protected function getHttpClient()
     {
         if (is_null( $this->httpClient )){
-            $this->httpClient = new Client([
+            $this->httpClient = new Client(\array_merge($this->http_options, [
                     'base_uri' => $this->endpoint,
-                    'connect_timeout' => 5,
-                    'timeout' => 25,
                     'http_errors' => false,
                     'headers' => [
                         'User-Agent' => 'maildrop-php/1.0',
                     ]
-                ]);
+                ]));
         }
 
         return $this->httpClient;
@@ -64,8 +74,7 @@ class Maildrop
     }
 
     public function getClientApiKey(){
-        if( !is_null($this->client_api_key) )
-        {
+        if (!is_null($this->client_api_key)) {
             return $this->client_api_key;
         }
 
