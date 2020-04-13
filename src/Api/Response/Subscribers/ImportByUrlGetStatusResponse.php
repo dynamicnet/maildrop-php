@@ -26,4 +26,16 @@ class ImportByUrlGetStatusResponse extends GenericResponse
     public function isCompleted(){
         return "COMPLETED"==$this->getStatus();
     }
+
+    public function isError(){
+        return "ERROR"==$this->getStatus();
+    }
+
+    public function isPending(){
+        return "PENDING"==$this->getStatus();
+    }
+
+    public function isWorking(){
+        return "WORKING"==$this->getStatus();
+    }
 }

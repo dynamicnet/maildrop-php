@@ -19,5 +19,8 @@ if (!$r->success()) {
     echo "Status: {$r->getStatus()}\n";
     echo "Message: {$r->getMessage()}\n";
 
+    var_dump($r->isPending());
     var_dump($r->isCompleted());
+    var_dump($r->isError());
+    var_dump($r->isWorking());
 }
