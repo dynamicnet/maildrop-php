@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace Maildrop\Api;
 
+use Maildrop\Api\GenericResponse;
 use Maildrop\Api\GenericCollectionResponse;
 use Maildrop\Api\Request\DataFormatter\NoFormat;
 
