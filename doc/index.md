@@ -196,3 +196,12 @@ $maildrop->partner()->my_account();
 ```php
 $maildrop->clients()->get();
 ```
+
+### Update a client account
+
+* [Documentation](https://doc.maildrop.fr/client-update-t162.html)
+* [Show me an example](/examples/update-a-client.php)
+
+```php
+$maildrop->clients()->update();
+```
