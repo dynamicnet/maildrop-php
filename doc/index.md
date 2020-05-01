@@ -9,7 +9,9 @@ This page will document the API classes and ways to properly use the API.
 ## Lists API
 
 ### Create a contact list
-[Show me an example](/examples/list-create.php)
+* [API documentation](https://doc.maildrop.fr/list-create-t127.html)
+* [Show me an example](/examples/list-create.php)
+
 ```php
 $maildrop->lists()->create([
     "name" => "My contacts list"
@@ -17,7 +19,9 @@ $maildrop->lists()->create([
 ```
 
 ### Retrieve a collection of contact list
-[Show me an example](/examples/list-get.php)
+* [API documentation](https://doc.maildrop.fr/list-get-t141.html)
+* [Show me an example](/examples/list-get.php)
+
 ```php
 $maildrop->lists()->get([
     "sort_field" => "name",
@@ -26,7 +30,9 @@ $maildrop->lists()->get([
 ```
 
 ### Delete a contact list
-[Show me an example](/examples/list-delete.php)
+* [API documentation](https://doc.maildrop.fr/list-delete-t129.html)
+* [Show me an example](/examples/list-delete.php)
+
 ```php
 $maildrop->lists()->delete([
     "listid" => "XXXXXXXXXXXXXXXXXXX"
@@ -35,7 +41,9 @@ $maildrop->lists()->delete([
 
 ## Custom fields API
 ### Add a custom field to a contact list
-[Show me an example](/examples/list-add-customfield.php)
+* [API documentation](https://doc.maildrop.fr/list-addcustomfield-t130.html)
+* [Show me an example](/examples/list-add-customfield.php)
+
 ```php
 $maildrop->custom_fields()->add();
 ```
@@ -43,117 +51,155 @@ $maildrop->custom_fields()->add();
 
 ## Segments API
 ### Add a segment to a contact list
-[Show me an example](/examples/list-add-segment.php)
+* [API documentation](https://doc.maildrop.fr/list-addsegment-t131.html)
+* [Show me an example](/examples/list-add-segment.php)
+
 ```php
 $maildrop->segments()->add();
 ```
 
 ## Campaigns API
 ### Retrieve a collection of campaigns
-[Show me an example](/examples/campaigns-get.php)
+* [API documentation](https://doc.maildrop.fr/campaign-get-t142.html)
+* [Show me an example](/examples/campaigns-get.php)
+
 ```php
 $maildrop->campaigns()->get();
 ```
 ### Create an email campaign
-[Show me an example](/examples/campaign-create.php)
+* [API documentation](https://doc.maildrop.fr/campaign-create-t121.html)
+* [Show me an example](/examples/campaign-create.php)
+
 ```php
 $maildrop->campaigns()->create();
 ```
 
 ### Schedule an email campaign for later sending
-[Show me an example](/examples/campaign-schedule.php)
+* [API documentation](https://doc.maildrop.fr/campaign-schedule-t123.html)
+* [Show me an example](/examples/campaign-schedule.php)
+
 ```php
 $maildrop->campaigns()->schedule();
 ```
 
 ### Schedule an email campaign for immediate sending
-[Show me an example](/examples/campaign-send.php)
+* [API documentation](https://doc.maildrop.fr/campaign-send-t122.html)
+* [Show me an example](/examples/campaign-send.php)
+
 ```php
 $maildrop->campaigns()->send();
 ```
 
 ### Delete an email campaign
-[Show me an example](/examples/campaign-delete.php)
+* [API documentation](https://doc.maildrop.fr/campaign-delete-t154.html)
+* [Show me an example](/examples/campaign-delete.php)
+
 ```php
 $maildrop->campaigns()->delete();
 ```
 
 ## Subscribers API
 ### Add a contact to a contact list
-[Show me an example](/examples/subscribe-to-list.php)
+* [API documentation](https://doc.maildrop.fr/subscriber-add-t61.html)
+* [Show me an example](/examples/subscribe-to-list.php)
+
 ```php
 $maildrop->subscribers()->add();
 ```
 
 ### Add a contact to a contact list and force resubscribe it
-[Show me an example](/examples/subscribe-to-list-and-force-resubscribe.php)
+* [API documentation](https://doc.maildrop.fr/subscriber-addandresubscribe-t64.html)
+* [Show me an example](/examples/subscribe-to-list-and-force-resubscribe.php)
+
 ```php
 $maildrop->subscribers()->add_and_resubscribe();
 ```
 
 ### Add many contacts to a contact list
-[Show me an example](/examples/subscribe-batch.php)
+* [API documentation](https://doc.maildrop.fr/subscriber-importbatch-t133.html)
+* [Show me an example](/examples/subscribe-batch.php)
+
 ```php
 $maildrop->subscribers()->import_batch();
 ```
 
 ### Asynchronously import contacts via a CSV file
-[Show me an example](/examples/subscribe-import-csv-by-url.php)
+* [API documentation](https://doc.maildrop.fr/subscriber-importbyurl-t137.html)
+* [Show me an example](/examples/subscribe-import-csv-by-url.php)
+
 ```php
 $maildrop->subscribers()->import_by_url();
 ```
 
 ### Check the status of an asynchronously import
-[Show me an example](/examples/subscribe-get-task-status.php)
+* [API documentation](https://doc.maildrop.fr/subscriber-importbyurlgetstatus-t138.html)
+* [Show me an example](/examples/subscribe-get-task-status.php)
+
 ```php
 $maildrop->subscribers()->import_by_url_get_status();
 ```
 
 ### Unsubscribe one or many contacts from a list
-[Show me an example](/examples/unsubscribe-from-list.php)
+* [API documentation](https://doc.maildrop.fr/subscriber-unsubscribebatch-t139.html)
+* [Show me an example](/examples/unsubscribe-from-list.php)
+
 ```php
 $maildrop->subscribers()->unsubscribe();
 ```
 
 ### Get many details of a contact
-[Show me an example](/examples/subscribe-getdetails.php)
+* [API documentation](https://doc.maildrop.fr/subscriber-getdetails-t158.html)
+* [Show me an example](/examples/subscribe-getdetails.php)
+
 ```php
 $maildrop->subscribers()->get_details();
 ```
 
 ## Reports API
 ### Retrieve the recipients
-[Show me an example](/examples/reports-get-recipients.php)
+* [API documentation](https://doc.maildrop.fr/reports-recipients-t153.html)
+* [Show me an example](/examples/reports-get-recipients.php)
+
 ```php
 $maildrop->reports()->recipients();
 ```
 
 ### Retrieve the openers
-[Show me an example](/examples/reports-get-opens.php)
+* [API documentation](https://doc.maildrop.fr/reports-opens-t132.html)
+* [Show me an example](/examples/reports-get-opens.php)
+
 ```php
 $maildrop->reports()->opens();
 ```
 
 ### Retrieve the bounces
-[Show me an example](/examples/reports-get-bounces.php)
+* [API documentation](https://doc.maildrop.fr/reports-bouncemessages-t128.html)
+* [Show me an example](/examples/reports-get-bounces.php)
+
 ```php
 $maildrop->reports()->bounces();
 ```
 
 ### Retrieve the unsubscribes
-[Show me an example](/examples/reports-get-unsubscribes.php)
+* [API documentation](https://doc.maildrop.fr/reports-unsubscribes-t126.html)
+* [Show me an example](/examples/reports-get-unsubscribes.php)
+
 ```php
 $maildrop->reports()->unsubscribes();
 ```
 
 ### Retrieve the clicked URL
-[Show me an example](/examples/reports-get-clicks.php)
+* [API documentation](https://doc.maildrop.fr/reports-clicks-t124.html)
+* [Show me an example](/examples/reports-get-clicks.php)
+
 ```php
 $maildrop->reports()->clicks();
 ```
 
 ### Retrieve the clickers of an URL
-[Show me an example](/examples/reports-get-clicks-details.php)
+* [API documentation](https://doc.maildrop.fr/reports-clickdetails-t125.html)
+* [Show me an example](/examples/reports-get-clicks-details.php)
+
 ```php
 $maildrop->reports()->clicks_details();
 ```
@@ -161,7 +207,7 @@ $maildrop->reports()->clicks_details();
 ## Ips Pool API
 ### List pool of dedicated IP on your account
 
-* [Documentation](https://doc.maildrop.fr/ippool-list-t134.html)
+* [API documentation](https://doc.maildrop.fr/ippool-list-t134.html)
 * [Show me an example](/examples/ips-of-an-ip-pool.php)
 
 ```php
@@ -170,7 +216,7 @@ $maildrop->ip_pools()->get();
 
 ### List IPs of an IP pool
 
-* [Documentation](https://doc.maildrop.fr/ippool-ips-t135.html)
+* [API documentation](https://doc.maildrop.fr/ippool-ips-t135.html)
 * [Show me an example](/examples/ips-of-an-ip-pool.php)
 
 ```php
@@ -180,7 +226,7 @@ $maildrop->ip_pools()->ips();
 ## Partner API
 ### Retrieve informations about your partner account
 
-* [Documentation](https://doc.maildrop.fr/partner-myaccount-t160.html)
+* [API documentation](https://doc.maildrop.fr/partner-myaccount-t160.html)
 * [Show me an example](/examples/partner-myaccount.php)
 
 ```php
@@ -190,7 +236,7 @@ $maildrop->partner()->my_account();
 ## Client API
 ### List clients managed by your partner account
 
-* [Documentation](https://doc.maildrop.fr/client-get-t161.html)
+* [API documentation](https://doc.maildrop.fr/client-get-t161.html)
 * [Show me an example](/examples/get-client-list.php)
 
 ```php
@@ -199,7 +245,7 @@ $maildrop->clients()->get();
 
 ### Update a client account
 
-* [Documentation](https://doc.maildrop.fr/client-update-t162.html)
+* [API documentation](https://doc.maildrop.fr/client-update-t162.html)
 * [Show me an example](/examples/update-a-client.php)
 
 ```php
