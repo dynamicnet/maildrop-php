@@ -160,13 +160,39 @@ $maildrop->reports()->clicks_details();
 
 ## Ips Pool API
 ### List pool of dedicated IP on your account
-[Show me an example](/examples/ips-of-an-ip-pool.php)
+
+* [Documentation](https://doc.maildrop.fr/ippool-list-t134.html)
+* [Show me an example](/examples/ips-of-an-ip-pool.php)
+
 ```php
 $maildrop->ip_pools()->get();
 ```
 
 ### List IPs of an IP pool
-[Show me an example](/examples/ips-of-an-ip-pool.php)
+
+* [Documentation](https://doc.maildrop.fr/ippool-ips-t135.html)
+* [Show me an example](/examples/ips-of-an-ip-pool.php)
+
 ```php
 $maildrop->ip_pools()->ips();
+```
+
+## Partner API
+### Retrieve informations about your partner account
+
+* [Documentation](https://doc.maildrop.fr/partner-myaccount-t160.html)
+* [Show me an example](/examples/partner-myaccount.php)
+
+```php
+$maildrop->partner()->my_account();
+```
+
+## Client API
+### List clients managed by your partner account
+
+* [Documentation](https://doc.maildrop.fr/client-get-t161.html)
+* [Show me an example](/examples/get-client-list.php)
+
+```php
+$maildrop->clients()->get();
 ```

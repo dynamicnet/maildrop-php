@@ -58,6 +58,6 @@ class GenericResponse
 
     public function getData()
     {
-        return $this->json_data->data->data??[];
+        return $this->json_data->data->data??$this->json_data->data??[];
     }
 }

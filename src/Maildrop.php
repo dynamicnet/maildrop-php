@@ -73,12 +73,22 @@ class Maildrop
         $this->partner_api_key = $partner_api_key;
     }
 
-    public function getClientApiKey(){
+    public function getClientApiKey()
+    {
         if (!is_null($this->client_api_key)) {
             return $this->client_api_key;
         }
 
         return self::$default_client_api_key;
+    }
+
+    public function getPartnerApiKey()
+    {
+        if (!is_null($this->partner_api_key)) {
+            return $this->partner_api_key;
+        }
+
+        return self::$default_partner_api_key;
     }
 
     public function tests()
@@ -119,5 +129,15 @@ class Maildrop
     public function ip_pools()
     {
         return new Api\IpPools($this->getClientApiKey(), $this->getHttpClient());
+    }
+
+    public function partner()
+    {
+        return new Api\Partner($this->getPartnerApiKey(), $this->getHttpClient());
+    }
+
+    public function clients()
+    {
+        return new Api\Clients($this->getPartnerApiKey(), $this->getHttpClient());
     }
 }
