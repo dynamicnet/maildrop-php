@@ -131,6 +131,16 @@ class Maildrop
         return new Api\IpPools($this->getClientApiKey(), $this->getHttpClient());
     }
 
+    public function sending_domains()
+    {
+        return new Api\SendingDomains($this->getClientApiKey(), $this->getHttpClient());
+    }
+
+    public function tracking_domains()
+    {
+        return new Api\TrackingDomains($this->getClientApiKey(), $this->getHttpClient());
+    }
+
     public function partner()
     {
         return new Api\Partner($this->getPartnerApiKey(), $this->getHttpClient());

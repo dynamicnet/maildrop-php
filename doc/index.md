@@ -251,3 +251,104 @@ $maildrop->clients()->get();
 ```php
 $maildrop->clients()->update();
 ```
+
+## SendingDomains API
+### List sending domains configured on an account
+
+* [API documentation](https://doc.maildrop.fr/sendingdomains-get-t163.html)
+* [Show me an example](/examples/sending-domains-get.php)
+
+```php
+$maildrop->sending_domains()->get();
+```
+
+### Add a sending domain
+
+* [API documentation](https://doc.maildrop.fr/sendingdomains-add-t164.html)
+* [Show me an example](/examples/sending-domains-add.php)
+
+```php
+$maildrop->sending_domains()->add();
+```
+
+### Update a sending domain
+
+* [API documentation](https://doc.maildrop.fr/sendingdomains-update-t165.html)
+* [Show me an example](/examples/sending-domains-update.php)
+
+```php
+$maildrop->sending_domains()->update();
+```
+
+### Verify DKIM setup for a sending domain
+
+* [API documentation](https://doc.maildrop.fr/sendingdomains-verifydkim-t167.html)
+* [Show me an example](/examples/sending-domains-verify-dkim.php)
+
+```php
+$maildrop->sending_domains()->verify_dkim();
+```
+
+### Verify Return-Path setup for a sending domain
+
+* [API documentation](https://doc.maildrop.fr/sendingdomains-verifyreturnpath-t168.html)
+* [Show me an example](/examples/sending-domains-verify-returnpath.php)
+
+```php
+$maildrop->sending_domains()->verify_returnpath();
+```
+
+### Delete a configured sending domain
+
+* [API documentation](https://doc.maildrop.fr/sendingdomains-delete-t166.html)
+* [Show me an example](/examples/sending-domains-delete.php)
+
+```php
+$maildrop->sending_domains()->delete();
+```
+
+## TrackingDomains API
+### List tracking and/or storage domains configured on an account
+
+* [API documentation](https://doc.maildrop.fr/trackingdomains-get-t169.html)
+* [Show me an example](/examples/tracking-domains-get.php)
+
+```php
+$maildrop->tracking_domains()->get();
+```
+
+### Add a tracking/storage domain
+
+* [API documentation](https://doc.maildrop.fr/trackingdomains-add-t170.html)
+* [Show me an example](/examples/tracking-domains-add.php)
+
+```php
+$maildrop->tracking_domains()->add();
+```
+
+### Verify the ownership of a tracking/storage domain
+
+* [API documentation](https://doc.maildrop.fr/trackingdomains-verifyownership-t172.html)
+* [Show me an example](/examples/tracking-domains-verify-ownership.php)
+
+```php
+$maildrop->tracking_domains()->verify_cname();
+```
+
+### Verify the CNAME setup for a tracking/storage domain
+
+* [API documentation](https://doc.maildrop.fr/trackingdomains-verifycname-t171.html)
+* [Show me an example](/examples/tracking-domains-verify-cname.php)
+
+```php
+$maildrop->tracking_domains()->verify_cname();
+```
+
+### Delete a configured tracking/storage domain
+
+* [API documentation](https://doc.maildrop.fr/trackingdomains-delete-t173.html)
+* [Show me an example](/examples/tracking-domains-delete.php)
+
+```php
+$maildrop->sending_domains()->delete();
+```
