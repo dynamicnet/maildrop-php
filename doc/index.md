@@ -352,3 +352,23 @@ $maildrop->tracking_domains()->verify_cname();
 ```php
 $maildrop->sending_domains()->delete();
 ```
+
+## Transactional API
+
+### Pause transactional email
+
+* [API documentation](https://doc.maildrop.fr/transactional-pause-t174.html)
+* [Show me an example](/examples/transactional-pause.php)
+
+```php
+$maildrop->transactionals()->pause();
+```
+
+### Resume transactional email
+
+* [API documentation](https://doc.maildrop.fr/transactional-resume-t175.html)
+* [Show me an example](/examples/transactional-resume.php)
+
+```php
+$maildrop->transactionals()->resume();
+```

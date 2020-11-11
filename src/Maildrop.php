@@ -141,6 +141,11 @@ class Maildrop
         return new Api\TrackingDomains($this->getClientApiKey(), $this->getHttpClient());
     }
 
+    public function transactionals()
+    {
+        return new Api\Transactionals($this->getClientApiKey(), $this->getHttpClient());
+    }
+
     public function partner()
     {
         return new Api\Partner($this->getPartnerApiKey(), $this->getHttpClient());
