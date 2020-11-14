@@ -2,7 +2,7 @@
 
 ## Installation
 
-To install the SDK, you will need to be using [Composer](http://getcomposer.org/)
+The SDK is available on [Packagist](https://packagist.org/packages/maildrop/maildrop-php). To install it, you will need to be using [Composer](http://getcomposer.org/)
 in your project.
 
 ```bash
