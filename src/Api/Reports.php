@@ -15,6 +15,14 @@ use Maildrop\Api\Response\Reports\OpensResponse;
 use Maildrop\Api\Response\Reports\ClicksResponse;
 use Maildrop\Api\Request\DataFormatter\NoFormat;
 
+/**
+ * @method RecipientsResponse recipients()
+ * @method OpensResponse opens()
+ * @method ClicksResponse clicks()
+ * @method GenericCollectionResponse unsubscribes()
+ * @method GenericCollectionResponse clicks_details()
+ * @method GenericCollectionResponse bounces()
+ */
 class Reports extends HttpApi
 {
     protected $callables = [

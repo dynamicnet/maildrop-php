@@ -13,6 +13,10 @@ use Maildrop\Api\GenericResponse;
 use Maildrop\Api\GenericCollectionResponse;
 use Maildrop\Api\Request\DataFormatter\NoFormat;
 
+/**
+ * @method GenericCollectionResponse get()
+ * @method GenericResponse update()
+ */
 class Clients extends HttpApi
 {
     protected $callables = [

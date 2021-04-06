@@ -14,6 +14,10 @@ use Maildrop\Api\GenericCollectionResponse;
 use Maildrop\Api\Request\DataFormatter\NoFormat;
 use Maildrop\Api\Request\DataFormatter\Lists\GetFormatter;
 
+/**
+ * @method GenericResponse pause() Pause message sending
+ * @method GenericResponse resume() Resume message sending
+ */
 class Transactionals extends HttpApi
 {
     protected $callables = [

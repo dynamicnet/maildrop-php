@@ -91,66 +91,105 @@ class Maildrop
         return self::$default_partner_api_key;
     }
 
+    /**
+     * @return Api\Tests
+     */
     public function tests()
     {
         return new Api\Tests($this->getClientApiKey(), $this->getHttpClient());
     }
 
+    /**
+     * @return Api\Lists
+     */
     public function lists()
     {
         return new Api\Lists($this->getClientApiKey(), $this->getHttpClient());
     }
 
+    /**
+     * @return Api\CustomFields
+     */
     public function custom_fields()
     {
         return new Api\CustomFields($this->getClientApiKey(), $this->getHttpClient());
     }
 
+    /**
+     * @return Api\Segments
+     */
     public function segments()
     {
         return new Api\Segments($this->getClientApiKey(), $this->getHttpClient());
     }
 
+    /**
+     * @return Api\Subscribers
+     */
     public function subscribers()
     {
         return new Api\Subscribers($this->getClientApiKey(), $this->getHttpClient());
     }
 
+    /**
+     * @return Api\Reports
+     */
     public function reports()
     {
         return new Api\Reports($this->getClientApiKey(), $this->getHttpClient());
     }
 
+    /**
+     * @return Api\Campaigns
+     */
     public function campaigns()
     {
         return new Api\Campaigns($this->getClientApiKey(), $this->getHttpClient());
     }
 
+    /**
+     * @return Api\IpPools
+     */
     public function ip_pools()
     {
         return new Api\IpPools($this->getClientApiKey(), $this->getHttpClient());
     }
 
+    /**
+     * @return Api\SendingDomains
+     */
     public function sending_domains()
     {
         return new Api\SendingDomains($this->getClientApiKey(), $this->getHttpClient());
     }
 
+    /**
+     * @return Api\TrackingDomains
+     */
     public function tracking_domains()
     {
         return new Api\TrackingDomains($this->getClientApiKey(), $this->getHttpClient());
     }
 
+    /**
+     * @return Api\Transactionals
+     */
     public function transactionals()
     {
         return new Api\Transactionals($this->getClientApiKey(), $this->getHttpClient());
     }
 
+    /**
+     * @return Api\Partner
+     */
     public function partner()
     {
         return new Api\Partner($this->getPartnerApiKey(), $this->getHttpClient());
     }
 
+    /**
+     * @return Api\Clients
+     */
     public function clients()
     {
         return new Api\Clients($this->getPartnerApiKey(), $this->getHttpClient());

@@ -12,6 +12,9 @@ namespace Maildrop\Api;
 use Maildrop\Api\GenericResponse;
 use Maildrop\Api\Request\DataFormatter\NoParameters;
 
+/**
+ * @method GenericResponse my_account()
+ */
 class Partner extends HttpApi
 {
     protected $callables = [

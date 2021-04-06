@@ -16,6 +16,13 @@ use Maildrop\Api\Request\DataFormatter\NoFormat;
 use Maildrop\Api\Request\DataFormatter\Campaigns\GetFormatter;
 use Maildrop\Api\Request\DataFormatter\Campaigns\ScheduleFormatter;
 
+/**
+ * @method GenericCollectionResponse get()
+ * @method GenericResponse delete()
+ * @method GenericResponse send()
+ * @method GenericResponse schedule()
+ * @method CreateResponse create()
+ */
 class Campaigns extends HttpApi
 {
     protected $callables = [

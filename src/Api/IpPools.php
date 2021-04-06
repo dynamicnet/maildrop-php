@@ -15,6 +15,10 @@ use Maildrop\Api\Request\DataFormatter\NoParameters;
 use Maildrop\Api\Response\IpPools\GetResponse;
 use Maildrop\Api\Response\IpPools\IpsResponse;
 
+/**
+ * @method GetResponse get()
+ * @method IpsResponse ips()
+ */
 class IpPools extends HttpApi
 {
     protected $callables = [

@@ -12,6 +12,9 @@ namespace Maildrop\Api;
 use Maildrop\Api\Response\Segments\AddResponse;
 use Maildrop\Api\Request\DataFormatter\Segments\AddFormatter;
 
+/**
+ * @method AddResponse add()
+ */
 class Segments extends HttpApi
 {
     protected $callables = [

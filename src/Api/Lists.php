@@ -15,6 +15,11 @@ use Maildrop\Api\Response\Lists\CreateResponse;
 use Maildrop\Api\Request\DataFormatter\NoFormat;
 use Maildrop\Api\Request\DataFormatter\Lists\GetFormatter;
 
+/**
+ * @method CreateResponse create()
+ * @method GenericCollectionResponse get()
+ * @method GenericResponse delete()
+ */
 class Lists extends HttpApi
 {
     protected $callables = [

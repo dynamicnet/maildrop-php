@@ -19,6 +19,15 @@ use Maildrop\Api\Request\DataFormatter\NoFormat;
 use Maildrop\Api\Request\DataFormatter\Subscribers\ImportBatchFormatter;
 use Maildrop\Api\Request\DataFormatter\Subscribers\UnsubscribeBatchFormatter;
 
+/**
+ * @method GenericResponse add()
+ * @method GenericResponse add_and_resubscribe()
+ * @method ImportBatchResponse import_batch()
+ * @method ImportByUrlResponse import_by_url()
+ * @method ImportByUrlGetStatusResponse import_by_url_get_status()
+ * @method UnsubscribeBatchResponse unsubscribe()
+ * @method GetDetailsResponse get_details()
+ */
 class Subscribers extends HttpApi
 {
     protected $callables = [

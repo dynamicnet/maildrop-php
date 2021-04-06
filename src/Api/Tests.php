@@ -14,6 +14,10 @@ use Maildrop\Api\Response\Tests\EchoResponse;
 use Maildrop\Api\Request\DataFormatter\NoFormat;
 use Maildrop\Api\Request\DataFormatter\NoParameters;
 
+/**
+ * @method EchoResponse echo()
+ * @method GenericResponse error()
+ */
 class Tests extends HttpApi
 {
     protected $callables = [

@@ -13,6 +13,14 @@ use Maildrop\Api\GenericResponse;
 use Maildrop\Api\GenericCollectionResponse;
 use Maildrop\Api\Request\DataFormatter\NoFormat;
 
+/**
+ * @method GenericCollectionResponse get()
+ * @method GenericResponse add()
+ * @method GenericResponse update()
+ * @method GenericResponse verify_dkim()
+ * @method GenericResponse verify_returnpath()
+ * @method GenericResponse delete()
+ */
 class SendingDomains extends HttpApi
 {
     protected $callables = [
