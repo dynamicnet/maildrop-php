@@ -40,7 +40,7 @@ abstract class HttpApi
                     'auth' => [$this->api_key, ''],
                     'query' => $parameters_formatter_class::format($query_params),
                 ]);
-        } catch (GuzzleHttp\Exception\ConnectException $e) {
+        } catch (\GuzzleHttp\Exception\ConnectException $e) {
             throw new ConnectException($e);
         }
 
@@ -54,7 +54,7 @@ abstract class HttpApi
                     'auth' => [$this->api_key, ''],
                     'form_params' => $parameters_formatter_class::format($form_params),
                 ]);
-        } catch (GuzzleHttp\Exception\ConnectException $e) {
+        } catch (\GuzzleHttp\Exception\ConnectException $e) {
             throw new ConnectException($e);
         }
 
