@@ -1,11 +1,11 @@
 <?php
 
-declare(strict_types=1);
-
-/*
+/**
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
  */
+
+declare(strict_types=1);
 
 namespace Maildrop;
 
@@ -40,7 +40,7 @@ class Maildrop
 
     protected function getHttpClient()
     {
-        if (is_null( $this->httpClient )){
+        if (is_null($this->httpClient)) {
             $this->httpClient = new Client(\array_merge($this->http_options, [
                     'base_uri' => self::$endpoint,
                     'http_errors' => false,
@@ -53,22 +53,22 @@ class Maildrop
         return $this->httpClient;
     }
 
-    public static function setDefaultClientApiKey( $client_api_key )
+    public static function setDefaultClientApiKey($client_api_key)
     {
         self::$default_client_api_key = $client_api_key;
     }
 
-    public function setClientApiKey( $client_api_key )
+    public function setClientApiKey($client_api_key)
     {
         $this->client_api_key = $client_api_key;
     }
 
-    public static function setDefaultPartnerApiKey( $partner_api_key )
+    public static function setDefaultPartnerApiKey($partner_api_key)
     {
         self::$default_partner_api_key = $partner_api_key;
     }
 
-    public function setPartnerApiKey( $partner_api_key )
+    public function setPartnerApiKey($partner_api_key)
     {
         $this->partner_api_key = $partner_api_key;
     }
@@ -80,7 +80,7 @@ class Maildrop
 
     public function getClientApiKey()
     {
-        if (!is_null($this->client_api_key)) {
+        if (! is_null($this->client_api_key)) {
             return $this->client_api_key;
         }
 
@@ -89,7 +89,7 @@ class Maildrop
 
     public function getPartnerApiKey()
     {
-        if (!is_null($this->partner_api_key)) {
+        if (! is_null($this->partner_api_key)) {
             return $this->partner_api_key;
         }
 
