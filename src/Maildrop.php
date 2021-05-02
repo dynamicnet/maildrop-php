@@ -73,6 +73,11 @@ class Maildrop
         $this->partner_api_key = $partner_api_key;
     }
 
+    public static function setEndpoint($endpoint)
+    {
+        self::$endpoint = $endpoint;
+    }
+
     public function getClientApiKey()
     {
         if (!is_null($this->client_api_key)) {
