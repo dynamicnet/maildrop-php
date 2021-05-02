@@ -20,7 +20,7 @@ class Maildrop
     private $partner_api_key;
 
     private $httpClient=null;
-    private $endpoint = 'https://api.dpmail.fr/json/';
+    static private $endpoint = 'https://api.dpmail.fr/json/';
 
     private $http_default_options = [
         'connect_timeout' => 5,
@@ -42,7 +42,7 @@ class Maildrop
     {
         if (is_null( $this->httpClient )){
             $this->httpClient = new Client(\array_merge($this->http_options, [
-                    'base_uri' => $this->endpoint,
+                    'base_uri' => self::$endpoint,
                     'http_errors' => false,
                     'headers' => [
                         'User-Agent' => 'maildrop-php/1.0',
