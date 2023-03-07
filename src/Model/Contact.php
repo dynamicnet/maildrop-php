@@ -14,7 +14,7 @@ class Contact implements \JsonSerializable
     private $email;
     private $first_name = false;
     private $last_name = false;
-    private $custom_fields = false;
+    private $customs_fields = false;
 
     public function __construct($email)
     {
@@ -37,11 +37,11 @@ class Contact implements \JsonSerializable
 
     public function setCustomField($field, $value)
     {
-        if (!\is_array($this->custom_fields)) {
-            $this->custom_fields = [];
+        if (!\is_array($this->customs_fields)) {
+            $this->customs_fields = [];
         }
 
-        $this->custom_fields[$field] = $value;
+        $this->customs_fields[$field] = $value;
 
         return $this;
     }
@@ -52,7 +52,7 @@ class Contact implements \JsonSerializable
             "email" => $this->email??false,
             "first_name" => $this->first_name??false,
             "last_name" => $this->last_name??false,
-            "custom_fields" => $this->custom_fields??false
+            "customs_fields" => $this->customs_fields??false
         ];
 
         $return = \array_filter($return, "self::filter");
