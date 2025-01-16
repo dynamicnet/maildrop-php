@@ -15,6 +15,7 @@ abstract class HttpApi
 {
     protected $httpClient;
     protected $api_key;
+    protected $callables;
 
     public function __construct($api_key, $httpClient)
     {
@@ -33,7 +34,7 @@ abstract class HttpApi
         return call_user_func_array([$this, $callable[0]], [$callable[1], $arguments[0]??[], $callable[2], $callable[3]]);
     }
 
-    protected function httpGet($path, $query_params =[], $parameters_formatter_class, $response_class)
+    protected function httpGet($path, $query_params, $parameters_formatter_class, $response_class)
     {
         try {
             $response =  $this->httpClient->request("GET", "{$path}.php", [
@@ -47,7 +48,7 @@ abstract class HttpApi
         return new $response_class($response);
     }
 
-    protected function httpPost($path, $form_params =[], $parameters_formatter_class, $response_class)
+    protected function httpPost($path, $form_params, $parameters_formatter_class, $response_class)
     {
         try {
             $response =  $this->httpClient->request("POST", "{$path}.php", [
