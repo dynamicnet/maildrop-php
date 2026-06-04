@@ -24,7 +24,8 @@ class Maildrop
 
     private $http_default_options = [
         'connect_timeout' => 5,
-        'timeout' => 25
+        'timeout' => 25,
+        'verify' => true,
     ];
 
     private $http_options = [];
@@ -35,7 +36,6 @@ class Maildrop
             $validated_user_http_options = \array_intersect_key($param_http_options, $this->http_default_options);
             $this->http_options = \array_merge($this->http_default_options, $validated_user_http_options);
         }
-
     }
 
     protected function getHttpClient()
@@ -182,6 +182,14 @@ class Maildrop
     public function transactionals()
     {
         return new Api\Transactionals($this->getClientApiKey(), $this->getHttpClient());
+    }
+
+    /**
+     * @return Api\Folders
+     */
+    public function folders()
+    {
+        return new Api\Folders($this->getClientApiKey(), $this->getHttpClient());
     }
 
     /**
